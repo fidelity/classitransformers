@@ -188,7 +188,8 @@ For additional questions and feedback, please contact us at abhijeet.kumar@fmr.c
 ## Acknowledgement
 
 ClassiTransformers is developed by Emerging Tech Team at Fidelity Investments.
+The major part of the package was developed as part of an internship program at Fidelity. We thank [Hrushikesh](https://github.com/Hrushikesh-Vazurkar) and [Mayank](https://github.com/mgroovyank) for their contribution to the package.
 
 ## License
 
-ClassiTransformers is licensed under the [Apache License 2.0.](Apache License 2.0.txt)
+ClassiTransformers is licensed under the [Apache License 2.0.](LICENSE.md)
