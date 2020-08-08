@@ -1,0 +1,12 @@
+name: env
+dependencies:
+  - python>=3.6
+  - anaconda
+  - pip
+  - pip:
+    - tensorflow-gpu==1.15.2
+    - bert-tensorflow
+    - torch==1.5.1
+    - torchvision==0.6.1
+    - transformers==2.11.0
+    - wget

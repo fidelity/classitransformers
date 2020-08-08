@@ -1,0 +1,15 @@
+=========================================================================
+==      NOTICE file for use with the Apache License, Version 2.0       ==
+=========================================================================
+
+classitransformers
+Copyright 2020 FMR LLC.
+
+This library includes software developed at FMR LLC (https://www.fidelity.com/).
+
+The library utilizes or derived from the following works and hence the dependency installed separately.
+- tensorflow | https://github.com/tensorflow/tensorflow | Apache 2.0 License 
+- bert-tensorflow | https://github.com/google-research/bert | Apache 2.0 License
+- electra | https://github.com/google-research/electra | Apache 2.0 License
+- torch | https://github.com/pytorch/pytorch | 3-Clause BSD License
+- transformers | https://github.com/huggingface/transformers | Apache 2.0 License

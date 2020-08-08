@@ -1,0 +1,5 @@
+The library is fully functional but we are looking to add these updates/features as next steps.
+
+1. Add unit tests - tests & fixtures
+2. Add deployment modules. After model is trained, codes for inferencing.
+3. Tensorflow serving for Electra

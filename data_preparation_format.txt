@@ -1,0 +1,38 @@
+For every task, there is data directory parameter as part of Configs class e.g. data_dir='./datasets/name_of_dataset_folder/'
+
+The data directory should have the following comma separated (csv format) files.
+
+    train.csv (train set)
+    test.csv  (test set)
+    dev.csv   (validation set)
+    
+    
+train.csv - Used for training the model.
+dev.csv - Used as validation set during the model training.
+test.csv - Used for scoring purpose after model training finished. 
+    
+    
+Both the training and validation set should contain the following columns in sequence.
+    
+    id
+    text
+    label (numeric, not text categories)
+    
+
+For example.
+
+id, text, label                                               
+0,  Raisio is the site of the main production plan, 2      
+1,  The production capacity can be tripled without, 0      
+
+
+Test set can have the following columns as labels may not be there.
+
+    id
+    text
+    
+For example.
+
+id, text
+0, Operating profit was EUR 11.4 mn , up from EURO
+1, The expansion will be delivered in the fourth
