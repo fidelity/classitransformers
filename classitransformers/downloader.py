@@ -1,3 +1,6 @@
+# Copyright 2020 FMR LLC <opensource@fidelity.com>
+# SPDX-License-Identifer: Apache-2.0
+
 import os
 import wget
 import shutil

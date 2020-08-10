@@ -14,11 +14,9 @@ class Configs(object):
     Parameters
     ----------
     
-    vocab_file:             The vocabulary file that the BERT model was trained on.
+    pretrained_model_dir:   Directory path of pretrained models. (check downloader.py)
     
-    bert_config_file:       The config json file corresponding to the pre-trained BERT model.
-    
-    init_checkpoint:        Initial checkpoint (usually from a pre-trained BERT model). 
+    model_name:             Name of the language model in small case (as string)
     
     learning_rate:          The initial learning rate for Adam.
     
@@ -71,11 +69,11 @@ class Configs(object):
     warmup_proportion:      Proportion of training to perform linear learning rate warmup for. 
                             E.g., 0.1 = 10% of training.
     
-    export_dir:             The output model (.pb format) dir, where the freezed graph and weights get stored.
+    export_dir:             The output model (.pb format) dir, where the freezed graph and weights get stored (only for BERT).
     
-    tokenizer:              Wordpiece tokenizer object
+    tokenizer:              Wordpiece tokenizer object.
     
-    export_path:            Path of saved .pb model for inferencing purpose
+    export_path:            Path of saved .pb model for inferencing purpose (Only for BERT).
     
     """
 

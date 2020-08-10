@@ -18,7 +18,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
-    keywords='bert electra classification roberta distilbert albert',
+    keywords='NLP language_models text_classification bert electra roberta distilbert albert',
     author='FMR LLC',
 )
 

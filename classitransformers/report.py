@@ -1,3 +1,6 @@
+# Copyright 2020 FMR LLC <opensource@fidelity.com>
+# SPDX-License-Identifer: Apache-2.0
+
 import numpy as np
 from itertools import product
 import matplotlib.pyplot as plt

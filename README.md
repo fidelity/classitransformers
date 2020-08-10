@@ -9,7 +9,7 @@ Currently implemented models
 - ALBERT (PyTorch - transformers library)
 - DistilBERT (PyTorch - transformers library)
 
-Supports
+Task
 - Sequence Classification
 
 ## Features
@@ -23,7 +23,7 @@ Supports
 
 <!--ts-->
 - [ClassiTransformers](#classi-transformers)
-  - [Features] (#features)
+  - [Features](#features)
 - [Table of contents](#table-of-contents)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -31,7 +31,7 @@ Supports
   - [Quick Start](#quick-start)
   - [Data Preparation](#data-preparation)
   - [Setting Configuration](#setting-configuration)
-  - [Class Methods] (#class-methods)
+  - [Class Methods](#class-methods)
   - [Real Dataset Examples](#real-dataset-examples)
   - [Support and Contributions](#support-and-contributions)
   - [Acknowledgement](#acknowledgement)
@@ -183,7 +183,7 @@ downloader('roberta') # Downloads to default dir '../models'
 Please submit bug reports and feature requests as Issues.
 Contributions are very welcome. 
 
-For additional questions and feedback, please contact us at abhijeet.kumar@fmr.com
+For additional questions and feedback, please contact us at classitransformers@fmr.com
 
 ## Acknowledgement
 
