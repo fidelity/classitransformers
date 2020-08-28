@@ -19,8 +19,8 @@ setuptools.setup(
     install_requires=required,
     python_requires='>=3.6',
     classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: Apache License 2.0",
+        "Programming Language :: Python :: 3.6",
+        "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",
     ],
     keywords='NLP language_models text_classification bert electra roberta distilbert albert',
