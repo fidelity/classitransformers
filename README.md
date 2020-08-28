@@ -1,6 +1,6 @@
 # ClassiTransformers
 
-ClassiTransformers is an abstract library based on Tensorflow implementation of BERT and ELECTRA, and transformers library of HuggingFace Inc. 
+[ClassiTransformers](https://pypi.org/project/classitransformers/) is an abstract library based on Tensorflow implementation of BERT and ELECTRA, and transformers library of HuggingFace Inc. 
 
 Currently implemented models
 - BERT (Tensorflow)
@@ -39,6 +39,12 @@ Task
  
 # Installation
 Assuming that anaconda environment is already installed,
+
+- ClassiTransformer can be installed from PyPI using 
+
+```
+pip install classitransformers
+```
 
 - with requirements.txt
 
