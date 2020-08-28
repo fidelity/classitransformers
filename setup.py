@@ -8,7 +8,7 @@ with open("requirements.txt") as fh:
 
 setuptools.setup(
     name="classitransformers",
-    packages=['classitransformers'],
+    packages=['classitransformers','electra'],
     version="0.0.1",
     author="FMR LLC",
     author_email="classitransformers@fmr.com",
@@ -16,7 +16,6 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/fidelity/classitransformers",
-    packages=setuptools.find_packages(),
     install_requires=required,
     python_requires='>=3.6',
     classifiers=[
