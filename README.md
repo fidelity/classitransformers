@@ -105,7 +105,7 @@ print(y_pred)
 
 ## Data Preparation
 
-The **directory** for input files needs to be **specified** while creating the **config** object. The files should be named **train.csv**, **dev.csv**, **test.csv** .**test.csv** may or may not have the labels. Labels would be useful forgenerating the report after testing.
+The **directory** for input files needs to be **specified** while creating the **config** object. The files should be named **train.csv**, **dev.csv**, **test.csv**. **test.csv** may or may not have the labels. Labels would be useful for generating the report after testing.
 
 Please check `data_preparation_format.txt` for details.
 
@@ -163,9 +163,11 @@ Inference on any input csv in batches using tensorflow serving for .pb model. (C
 **`text_inference()`**
 Inference on list of sentences as input.
 
-**`report()`**
+**`metrics()`**
 Prints and returns the accuracy and other metrics. Also prints Confusion Matrix (decorated matrix using matplotlib)
 
+**`downloader()`**
+Downloads pre-trained models just by passing model names in lowercase.
 
 ## Getting Language Models.
 
