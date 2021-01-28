@@ -30,10 +30,11 @@ Task
 - [Usage](#usage)
   - [Structure](#structure)
   - [Quick Start](#quick-start)
-  - [Inferencing post Finetuning](#inferencing-post-finetuning)
+  - [Inferencing post Finetuning](#inferencing-post-fine-tuning)
   - [Data Preparation](#data-preparation)
   - [Setting Configuration](#setting-configuration)
   - [Class Methods](#class-methods)
+  - [Getting Language Models](#getting-language-models)
   - [Real Dataset Examples](#real-dataset-examples)
   - [Support and Contributions](#support-and-contributions)
   - [Acknowledgement](#acknowledgement)
@@ -76,7 +77,7 @@ Example notebooks can be found in the `sample_notebooks` directory.
 * `classitransformers.inference` - Used for inferencing in production, Only requires fine-tuned model directory and few hyperparameters.
 
   
-## Qucik Start
+## Quick Start
 Supports text classification with any number of labels.
 
 ```python
@@ -187,7 +188,7 @@ Prints and returns the accuracy and other metrics. Also prints Confusion Matrix 
 **`downloader()`**
 Downloads pre-trained models just by passing model names in lowercase.
 
-## Getting Language Models.
+## Getting Language Models
 
 ```python
 from classitransformers.downloader import downloader
