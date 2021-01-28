@@ -18,6 +18,7 @@ Task
 - Easy to use. Takes away all the complexity of writing tensorflow or pytorch codes for training and testing classification models.
 - It provides an methods to easily train, test and create deployable models in .pb and .bin format in just 5 steps.
 - Hyperparameters can be easily modified without having to change the source code.
+- Deployment ready module available.
 
 # Table of contents
 
@@ -29,6 +30,7 @@ Task
 - [Usage](#usage)
   - [Structure](#structure)
   - [Quick Start](#quick-start)
+  - [Inferencing post Finetuning](#inferencing-post-finetuning)
   - [Data Preparation](#data-preparation)
   - [Setting Configuration](#setting-configuration)
   - [Class Methods](#class-methods)
@@ -71,6 +73,7 @@ Example notebooks can be found in the `sample_notebooks` directory.
 * `classitransformers.report` - Used for reporting performance metrics. (precision, recall, F1, confusion matric)
 * `classitransformers.configs` - Used for initializing the hyperparameters of the language models. Also checkas and creates the necessary directories.
 * `classitransformers.downloader` - Used for downloading any of the 5 language models.
+* `classitransformers.inference` - Used for inferencing in production, Only requires fine-tuned model directory and few hyperparameters.
 
   
 ## Qucik Start
@@ -80,27 +83,42 @@ Supports text classification with any number of labels.
 
 from classitransformers.report import metrics
 from classitransformers.configs import Configs
-from classitransformers.tfelectra import ElectraClassification
+from classitransformers.pytransformers import TransformersClassification
 
-config = Configs(pretrained_model_dir = './models/Electra_base/',
-              model_name='electra',
+config = Configs(pretrained_model_dir = './models/DistilBert/',
+              model_name='distilbert',
               num_train_epochs=3, 
               train_batch_size = 16,
               eval_batch_size = 8, 
               do_train = True, 
               do_eval = True, 
-              label_list = ["0", "1", "2", "3", "4"],
-              max_seq_length = 256,
-              data_dir = "./datasets/bbcsports/", 
-              output_dir = "./electra_output_sports/")
+              label_list = ["0", "1", "2"],
+              max_seq_length = 64,
+              data_dir = "./datasets/financial_phrasebank/", 
+              output_dir = "./transformers_output_sentiment/")
 
-model = ElectraClassification(config) 
+model = TransformersClassification(config) 
 
 model.train()
 prediction = model.test()
 
 y_pred = [np.argmax(tup) for tup in prediction]
 print(y_pred)
+```
+
+## Inferencing post Fine-tuning
+Supports pytorch models to be directly used in deployment/production.
+
+```python
+from classitransformers.inference import InferenceModel
+
+model = InferenceModel(num_classes = 3,
+                       max_seq_length = 64,
+                       batch_size = 8,
+                       model_name='distilbert',
+                       classification_model_dir = './transformers_output_sentiment/')
+
+model.text_inference(['Market gives the best returns among all the options of investemnts'])
 ```
 
 ## Data Preparation
