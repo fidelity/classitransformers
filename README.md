@@ -172,7 +172,7 @@ Downloads pre-trained models just by passing model names in lowercase.
 ## Getting Language Models.
 
 ```python
-from classitransformers import downloader
+from classitransformers.downloader import downloader
 
 # pass name of the model ('albert', 'bert', 'electra', 'roberta', 'distilbert')
 downloader('roberta') # Downloads to default dir '../models'

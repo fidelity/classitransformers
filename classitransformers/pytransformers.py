@@ -14,8 +14,8 @@ import pandas as pd
 from torch.utils.data import TensorDataset, random_split
 from transformers import AdamW, get_linear_schedule_with_warmup
 from torch.utils.data import DataLoader, RandomSampler, SequentialSampler
-from transformers import DistilBertTokenizer, AlbertTokenizer, RobertaTokenizer
-from transformers import DistilBertForSequenceClassification, AlbertForSequenceClassification, RobertaForSequenceClassification
+from transformers import DistilBertTokenizer, AlbertTokenizer, RobertaTokenizer, BertTokenizer
+from transformers import DistilBertForSequenceClassification, AlbertForSequenceClassification, RobertaForSequenceClassification, BertForSequenceClassification
 
 logging.getLogger("transformers.tokenization_utils").setLevel(logging.ERROR)
 
@@ -69,6 +69,11 @@ class TransformersClassification:
         else:
             print('No GPU available, using the CPU instead.')
             self.device = torch.device("cpu")
+        
+        if self.Configs.model_name == 'bert':
+            self.model = BertForSequenceClassification.from_pretrained(self.Configs.pretrained_model_dir,
+                                                                         num_labels=self.num_classes)
+            self.tokenizer = BertTokenizer.from_pretrained(self.Configs.pretrained_model_dir)
         
         if self.Configs.model_name == 'albert':
             self.model = AlbertForSequenceClassification.from_pretrained(self.Configs.pretrained_model_dir,
@@ -413,7 +418,6 @@ def add_CLS_and_SEP(sentences,tokenizer):
         # Update the maximum sentence length.
         max_len = max(max_len, len(input_ids))
 
-    
     return sentences
 
 
